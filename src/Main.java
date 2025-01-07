@@ -3,6 +3,7 @@ import homework.domain.Customer;
 import homework.domain.Order;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
@@ -88,6 +89,17 @@ public class Main {
         itemsSoldQuantities.entrySet().stream().limit(5).forEach((entry) -> {
             System.out.printf("%s: %d%n", entry.getKey(), entry.getValue());
         });
+
+        System.out.println("\n=== All Available Items ===");
+        Set<String> allItems = restaurantOrders.getAllItemNames();
+        System.out.println("Total unique items: " + allItems.size());
+        allItems.stream().limit(5).forEach(System.out::println);
+
+        System.out.println("\n=== Customer Emails by Item (Sample for first item) ===");
+        String sampleItem = allItems.iterator().next();
+        List<String> emailsByItem = restaurantOrders.getEmailsByOrderedItem(sampleItem);
+        System.out.println("Emails for item '" + sampleItem + "' (showing first 5 if available):");
+        emailsByItem.stream().limit(5).forEach(System.out::println);
 
         System.out.println("\n" + "=".repeat(50) + "\n");
     }

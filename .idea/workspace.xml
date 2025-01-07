@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f4aeed3-e9db-4fcc-a64a-be7efb8cf318" name="Changes" comment="Добавлены следуюшие методы:&#10;Метод для группировки заказов по имени заказчика&#10;Метод для получения общей суммы заказов для каждого заказчика&#10;Метод для нахождения клиента с максимальной суммой заказов&#10;Метод для нахождения клиента с минимальной суммой заказов&#10;Метод для группировки товаров по их общему количеству.">
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="7f4aeed3-e9db-4fcc-a64a-be7efb8cf318" name="Changes" comment="Вызовил все методы из класса RestaurantOrders в класс Main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework30.iml" beforeDir="false" afterPath="$PROJECT_DIR$/homework30.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/homework/RestaurantOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/homework/RestaurantOrders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/homework/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/homework/domain/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/homework/util/GenerateOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/homework/util/GenerateOrders.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +18,21 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "KAKI504"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:KAKI504/HomeWork30.git",
+    "accountId": "c36da263-5ba8-454b-8b8a-680727bdbe1e"
+  }
+}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 7
@@ -75,13 +92,22 @@
       <option name="project" value="LOCAL" />
       <updated>1736236308054</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Вызовил все методы из класса RestaurantOrders в класс Main">
+      <option name="closed" value="true" />
+      <created>1736237656901</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1736237656901</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add method to print orders&#10;add top N orders by total&#10;add bottom N orders by total&#10;filter home delivery orders&#10;add home delivery extremes&#10;filter orders by total range&#10;calculate total revenue&#10;get unique sorted customer emails&#10;optimize and validate code" />
     <MESSAGE value="без изменений просто добавлены" />
     <MESSAGE value="Добавлены следуюшие методы:&#10;Метод для группировки заказов по имени заказчика&#10;Метод для получения общей суммы заказов для каждого заказчика&#10;Метод для нахождения клиента с максимальной суммой заказов&#10;Метод для нахождения клиента с минимальной суммой заказов&#10;Метод для группировки товаров по их общему количеству." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлены следуюшие методы:&#10;Метод для группировки заказов по имени заказчика&#10;Метод для получения общей суммы заказов для каждого заказчика&#10;Метод для нахождения клиента с максимальной суммой заказов&#10;Метод для нахождения клиента с минимальной суммой заказов&#10;Метод для группировки товаров по их общему количеству." />
+    <MESSAGE value="Вызовил все методы из класса RestaurantOrders в класс Main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Вызовил все методы из класса RestaurantOrders в класс Main" />
   </component>
 </project>
