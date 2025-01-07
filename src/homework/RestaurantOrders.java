@@ -11,7 +11,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class RestaurantOrders {
-    // Этот блок кода менять нельзя! НАЧАЛО!
     private List<Order> orders;
 
     private RestaurantOrders(String fileName) {
@@ -33,11 +32,6 @@ public class RestaurantOrders {
     public List<Order> getOrders() {
         return orders;
     }
-    // Этот блок кода менять нельзя! КОНЕЦ!
-
-    //----------------------------------------------------------------------
-    //------   Реализация ваших методов должна быть ниже этой линии   ------
-    //----------------------------------------------------------------------
 
     public void printOrders() {
         orders.forEach(order -> System.out.printf(
@@ -105,6 +99,7 @@ public class RestaurantOrders {
         return orders.stream()
                 .collect(Collectors.groupingBy(order -> order.getCustomer().getFullName()));
     }
+
     public Map<String, Double> getTotalsByCustomerName() {
         return orders.stream()
                 .collect(Collectors.groupingBy(
@@ -112,6 +107,7 @@ public class RestaurantOrders {
                         Collectors.summingDouble(Order::getTotal)
                 ));
     }
+
     public Customer getCustomerWithMaxOrdersTotal() {
         return orders.stream()
                 .collect(Collectors.groupingBy(
@@ -126,6 +122,7 @@ public class RestaurantOrders {
                         .orElse(null))
                 .orElse(null);
     }
+
     public Customer getCustomerWithMinOrdersTotal() {
         return orders.stream()
                 .collect(Collectors.groupingBy(
@@ -140,6 +137,7 @@ public class RestaurantOrders {
                         .orElse(null))
                 .orElse(null);
     }
+
     public Map<String, Integer> getItemsSoldQuantities() {
         return orders.stream()
                 .flatMap(order -> order.getItems().stream())
@@ -149,5 +147,20 @@ public class RestaurantOrders {
                 ));
     }
 
+    public List<String> getEmailsByOrderedItem(String itemName) {
+        return orders.stream()
+                .filter(order -> order.getItems().stream()
+                        .anyMatch(item -> item.getName().equals(itemName)))
+                .map(order -> order.getCustomer().getEmail())
+                .distinct()
+                .sorted()
+                .collect(Collectors.toList());
+    }
 
+    public Set<String> getAllItemNames() {
+        return orders.stream()
+                .flatMap(order -> order.getItems().stream())
+                .map(Item::getName)
+                .collect(Collectors.toSet());
+    }
 }

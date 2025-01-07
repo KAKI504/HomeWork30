@@ -30,6 +30,7 @@ public final class GenerateOrders {
         customers = names.stream().map(GenerateOrders::makeCustomer).collect(Collectors.toList());
     }
 
+
     private GenerateOrders() {
     }
 

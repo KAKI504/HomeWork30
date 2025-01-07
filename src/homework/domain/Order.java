@@ -1,6 +1,5 @@
 package homework.domain;
 
-import homework.util.NotImplementedException;
 
 import java.util.List;
 import java.util.Objects;
